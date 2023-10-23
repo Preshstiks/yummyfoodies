@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 const ProductsCard = ({ item }) => {
   return (
-    <div className="product__items cursor-pointer">
+    <div className="product__items w-[200px] mb-2 cursor-pointer">
       <motion.div
         whileHover={{ filter: "brightness(50%)" }}
         className="product__img bg-white p-4 w-[200px] h-[200px] flex items-center justify-center"
@@ -16,8 +16,8 @@ const ProductsCard = ({ item }) => {
         />
       </motion.div>
       <div className="p-2 product__info">
-        <h3 className="product__name text-[17px] font-semibold mt-4">
-          <Link to="/shop/id">{item.productName}</Link>
+        <h3 className="product__name text-[17px] p font-semibold mt-4">
+          <Link to={`/shop/${item.id}`}>{item.productName}</Link>
         </h3>
         <div className="text-center">
           <span className="text-[14px]">{item.category}</span>

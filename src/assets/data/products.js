@@ -348,7 +348,7 @@ export const productCard = [
   },
   {
     id: 19,
-    productName: "Chicken Fingers",
+    productName: "Deep Fried Chicken Fingers",
     productImg: ProductImg19,
     category: "Chicken",
     price: "$30",
@@ -369,7 +369,7 @@ export const productCard = [
     productName: "Chicken Wings and KetchUp",
     productImg: ProductImg20,
     category: "Chicken",
-    price: "$30",
+    price: "$40",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -384,10 +384,10 @@ export const productCard = [
   },
   {
     id: 21,
-    productName: "Chicken Crisp",
+    productName: "Deep Fried Chicken Crisp",
     productImg: ProductImg21,
     category: "Chicken",
-    price: "$30",
+    price: "$60",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -405,7 +405,7 @@ export const productCard = [
     productName: "Roasted Chicken Lap",
     productImg: ProductImg22,
     category: "Chicken",
-    price: "$30",
+    price: "$55",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -423,7 +423,7 @@ export const productCard = [
     productName: "Full Roasted Chicken",
     productImg: ProductImg23,
     category: "Chicken",
-    price: "$30",
+    price: "$150",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:

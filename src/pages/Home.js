@@ -8,12 +8,17 @@ import ProductList from "../components/UI/ProductList";
 import { productCard } from "../assets/data/products";
 import { useEffect, useState } from "react";
 const Home = () => {
-  const [data, setData] = useState(productCard);
+  const [trendingProducts, setTrendingProducts] = useState([]);
+  const [bestSalesProducts, setBestSalesProducts] = useState([]);
   useEffect(() => {
-    const filteredProducts = productCard.filter(
+    const filteredTrendingProducts = productCard.filter(
       (item) => item.category === "Burger"
     );
-    setData(filteredProducts);
+    const filteredBestSalesProducts = productCard.filter(
+      (item) => item.category === "Chicken"
+    );
+    setTrendingProducts(filteredTrendingProducts);
+    setBestSalesProducts(filteredBestSalesProducts);
   }, []);
   const year = new Date().getFullYear();
   return (
@@ -54,12 +59,20 @@ const Home = () => {
       <Services />
       <section className="trending__products">
         <div>
-          <div className="text-center">
+          <div className="text-center py-[55px]">
             <h2 className="section__title text-[26px] font-medium">
               Trending Products
             </h2>
           </div>
-          <ProductList data={data} />
+          <ProductList data={trendingProducts} />
+        </div>
+      </section>
+      <section className="best__sales">
+        <div className="text-center py-[55px]">
+          <h2 className="section__title text-[26px] font-medium">Best Sales</h2>
+        </div>
+        <div>
+          <ProductList data={bestSalesProducts} />
         </div>
       </section>
     </Helmet>
