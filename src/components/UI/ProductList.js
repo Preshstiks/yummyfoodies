@@ -1,12 +1,10 @@
 import ProductsCard from "./ProductCards";
-
-const ProductList = () => {
+const ProductList = ({ data }) => {
   return (
-    <div>
-      <ProductsCard />
-      <ProductsCard />
-      <ProductsCard />
-      <ProductsCard />
+    <div className="flex items-center gap-6 px-[10%]">
+      {data.map((item) => (
+        <ProductsCard item={item} />
+      ))}
     </div>
   );
 };

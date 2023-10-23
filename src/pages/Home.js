@@ -4,7 +4,17 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Services from "../services";
+import ProductList from "../components/UI/ProductList";
+import { productCard } from "../assets/data/products";
+import { useEffect, useState } from "react";
 const Home = () => {
+  const [data, setData] = useState(productCard);
+  useEffect(() => {
+    const filteredProducts = productCard.filter(
+      (item) => item.category === "Burger"
+    );
+    setData(filteredProducts);
+  }, []);
   const year = new Date().getFullYear();
   return (
     <Helmet title={"Home"}>
@@ -23,7 +33,7 @@ const Home = () => {
             </p>
             <motion.button
               whileTap={{ scale: 1.2 }}
-              className="bg-orange-500 mt-[30px] py-3 font-semibold rounded-[15px] px-6 text-black buy__btn flex items-center"
+              className="bg-orange-500 hover:underline hover:text-white mt-[30px] py-3 font-semibold rounded-[15px] px-6 text-black buy__btn flex items-center"
             >
               <Link to="/shop">ORDER NOW </Link>
               <HiOutlineArrowNarrowRight className="text-[25px]" />
@@ -49,6 +59,7 @@ const Home = () => {
               Trending Products
             </h2>
           </div>
+          <ProductList data={data} />
         </div>
       </section>
     </Helmet>
